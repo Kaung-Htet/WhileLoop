@@ -25,9 +25,11 @@ public class Main {
 //        } while (count !=6);
 
         int number = 4;
-        int finishNumber = 20;
+        int finishNumber = 50;
+        int evenNumRecord = 0;
+        int totalEvenNum = 0;
 
-        while (number <= 20){
+        while (number <= finishNumber){
             number++;
             if (!isEvenNumber(number)){
                 //continue က break နဲ့ဆင်တယ်
@@ -38,7 +40,21 @@ public class Main {
             }
 
             System.out.println("Even number " + number);
+            totalEvenNum += number;
+            evenNumRecord++;
+            if (evenNumRecord == 5){
+                System.out.println("Total number of " + evenNumRecord +
+                        " even numbers found is " + totalEvenNum);
+                break;
+            }
+
         }
+
+        // Modify the while code above
+        // Make it also record the total number of even numbers it has found
+        // and break once 5 are found
+        // and at the end, display the total number of even numbers found
+
     }
 
     public static boolean isEvenNumber (int num){
