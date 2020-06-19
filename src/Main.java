@@ -1,11 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-        int count = 6;
-        //ရိုးရိုး while loop က condition မှန်မှ code block ထဲက code တွေ run မှာဖြစ်တယ်
-        while(count != 6){
-            System.out.println("Count value is " + count);
-            count++;
-        }
+//        int count = 6;
+//        //ရိုးရိုး while loop က condition မှန်မှ code block ထဲက code တွေ run မှာဖြစ်တယ်
+//        while(count != 6){
+//            System.out.println("Count value is " + count);
+//            count++;
+//        }
 
 //        for (int i = 6; i != 6; i++){
 //            System.out.println("Count value is " + i);
@@ -23,10 +23,26 @@ public class Main {
 //                break;
 //            }
 //        } while (count !=6);
+
+        int number = 4;
+        int finishNumber = 20;
+
+        while (number <= 20){
+            number++;
+            if (!isEvenNumber(number)){
+                //continue က break နဲ့ဆင်တယ်
+                //break ကလုံး၀ရပ်သွားတယ် continue ကအောက်ကကုဒ်တွေဆီဆက်မသွားပဲ
+                //loop ပြန်ပတ်တယ် (ဆိုလိုတာက next iteration)
+                //အကယ်၍ continue မပါရင် loop ပတ်တိုင်း အောက်က print statement ဆီရောက်မယ်
+                continue;
+            }
+
+            System.out.println("Even number " + number);
+        }
     }
 
     public static boolean isEvenNumber (int num){
-        if (num % 2 == 0){
+        if ((num % 2) == 0){
             return true;
         } else {
             return false;
